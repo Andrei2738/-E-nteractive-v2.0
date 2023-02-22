@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47b74448-b696-42e4-b15b-3b2c2050fb3b" name="Changes" comment="Code bits" />
+    <list default="true" id="47b74448-b696-42e4-b15b-3b2c2050fb3b" name="Changes" comment="Code bits">
+      <change afterPath="$PROJECT_DIR$/myAudio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/myFile.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
