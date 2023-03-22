@@ -113,6 +113,10 @@
 
     animal2.addEventListener("click", function(event) {
         if (animal2.id.split(".")[0] === audio.split(".")[0]){
+           popUpCreated = true;
+            const overlay = document.createElement("div");
+            overlay.classList.add("backdrop");
+            document.body.appendChild(overlay);
             const popUp = document.createElement("div");
           popUp.className = "pop-up";
           const message = document.createElement("p");
@@ -132,6 +136,10 @@
           popUp.appendChild(button_hub)
           document.body.appendChild(popUp);
         }else{
+            popUpCreated = true;
+            const overlay = document.createElement("div");
+            overlay.classList.add("backdrop");
+            document.body.appendChild(overlay);
             const popUp = document.createElement("div");
           popUp.className = "pop-up";
           const message = document.createElement("p");
