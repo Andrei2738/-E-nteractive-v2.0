@@ -17,22 +17,19 @@ const game4_coords = game4.getBoundingClientRect();
 console.log(game4_coords.top, game4_coords.right);
 
 
-let moveBy = 50;
+let moveBy = 5;
 window.addEventListener('load', () => {
     circle.style.position = 'absolute';
-    circle.style.left = 0;
-    circle.style.top = 0;
+    circle.style.left = '50vw';
+    circle.style.top = '50vh';
+    circle.style.transform = 'translate(-50%, -50%)';
 });
 
 window.addEventListener('keydown', (e) => {
     let companion = document.getElementById('companion');
     const companion_coords = companion.getBoundingClientRect();
-    console.log(companion_coords.top, companion_coords.right);
+    console.log(companion_coords)
 
-    console.log("companion coords (Top, Right)=" , companion_coords.top, game1_coords.top)
-
-    console.log("Top dif=" , Math.abs(companion_coords.top - game1_coords.top))
-    console.log( "Right dif=" , Math.abs(companion_coords.right - game1_coords.right))
 
     if ((Math.abs(companion_coords.top - (game1_coords.top + 160 )) <= 100) && (Math.abs(companion_coords.right - game1_coords.right) <= 100)  ){
         console.log("Touching 1")
@@ -118,18 +115,23 @@ window.addEventListener('keydown', (e) => {
 
     }
 
+
     switch (e.key) {
         case 'ArrowLeft':
-            circle.style.left = parseInt(circle.style.left) - moveBy + 'px';
+            circle.style.left = parseInt(circle.style.left) - moveBy + 'vw';
+            console.log("companion coords (Top, Right)=" , companion_coords.top, companion_coords.left)
             break;
         case 'ArrowRight':
-            circle.style.left = parseInt(circle.style.left) + moveBy + 'px';
+            circle.style.left = parseInt(circle.style.left) + moveBy + 'vw';
+            console.log("companion coords (Top, Right)=" , companion_coords.top, companion_coords.left)
             break;
         case 'ArrowUp':
-            circle.style.top = parseInt(circle.style.top) - moveBy + 'px';
+            circle.style.top = parseInt(circle.style.top) - moveBy + 'vh';
+            console.log("companion coords (Top, Right)=" , companion_coords.top, companion_coords.right)
             break;
         case 'ArrowDown':
-            circle.style.top = parseInt(circle.style.top) + moveBy + 'px';
+            circle.style.top = parseInt(circle.style.top) + moveBy + 'vh';
+            console.log("companion coords (Top, Right)=" , companion_coords.top, companion_coords.right)
             break;
 
     }
